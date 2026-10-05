@@ -1,0 +1,231 @@
+/* CITS3011 Group 30 report - print stylesheet (A4, 4 pages max) */
+
+@page {
+    size: A4;
+    margin: 10mm 12mm 10mm 12mm;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.3;
+    color: #111;
+    margin: 0;
+    padding: 0;
+    hyphens: auto;
+}
+
+/* Title block */
+h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 0 0 3pt 0;
+    padding: 0;
+    border: none;
+}
+
+.authors {
+    font-size: 9.5pt;
+    color: #333;
+    margin: 0 0 7pt 0;
+    padding-bottom: 6pt;
+    border-bottom: 1pt solid #111;
+}
+
+/* Section headings: a hairline above each section separates it from the one before */
+h2 {
+    font-size: 11.5pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 10pt 0 4pt 0;
+    padding: 5pt 0 0 0;
+    border: none;
+    border-top: 0.5pt solid #999;
+    break-after: avoid;
+    clear: both;
+}
+
+.authors + h2 {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 6pt 0 2pt 0;
+    break-after: avoid;
+}
+
+/* Paragraphs */
+p {
+    margin: 0 0 5pt 0;
+    orphans: 2;
+    widows: 2;
+}
+
+strong, b {
+    font-weight: bold;
+    color: #000;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    color: #111;
+    text-decoration: underline;
+}
+
+/* Tables: rules only, no grid, no shading */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 8.5pt;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    margin: 2pt 0 8pt 0;
+    border-top: 1pt solid #111;
+    border-bottom: 1pt solid #111;
+    break-inside: avoid;
+}
+
+th,
+td {
+    padding: 1.6pt 6pt 1.6pt 0;
+    border: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 0.5pt solid #111;
+    padding-top: 2.5pt;
+    padding-bottom: 2.5pt;
+}
+
+td:first-child,
+th:first-child {
+    width: 2.6em;
+    padding-left: 2pt;
+}
+
+/* Captions: table caption sits above its table, figure caption below its figure */
+.caption,
+figcaption {
+    font-size: 8.5pt;
+    line-height: 1.25;
+    color: #333;
+}
+
+.caption {
+    margin: 6pt 0 2pt 0;
+    break-after: avoid;
+}
+
+figure {
+    margin: 7pt 0 8pt 0;
+    padding: 0;
+    break-inside: avoid;
+}
+
+/* A figure beside the text: the paragraphs after it wrap around its left side */
+figure.side {
+    float: right;
+    width: 46%;
+    margin: 2pt 0 5pt 12pt;
+}
+
+figure img,
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 3pt auto;
+}
+
+/* Code: names of functions and attributes in the submitted agent */
+code {
+    font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: 0.86em;
+    color: #000;
+    background: #f1f1f1;
+    padding: 0 2pt;
+    border-radius: 2pt;
+}
+
+pre {
+    font-size: 8pt;
+    line-height: 1.2;
+    background: none;
+    border: 0.5pt solid #999;
+    padding: 3pt 5pt;
+    margin: 3pt 0 5pt 0;
+    white-space: pre-wrap;
+    break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+}
+
+/* References: the only numbered list in the report, shown as [1], [2], ... */
+ol {
+    list-style: none;
+    counter-reset: reference;
+    margin: 0;
+    padding: 0;
+    font-size: 8pt;
+    line-height: 1.2;
+}
+
+ol li {
+    counter-increment: reference;
+    margin: 0 0 2.5pt 0;
+    padding-left: 2.1em;
+    text-indent: -2.1em;
+}
+
+ol li::before {
+    content: "[" counter(reference) "] ";
+    display: inline-block;
+    width: 2.1em;
+    text-indent: 0;
+}
+
+/* Bullets: a dash, close to the text they belong to */
+ul {
+    list-style-type: "\2013\00a0\00a0";
+    margin: -2pt 0 5pt 0;
+    padding-left: 15pt;
+}
+
+/* Small line under a section heading */
+.note {
+    font-size: 8.5pt;
+    font-style: italic;
+    color: #555;
+    margin: -2pt 0 4pt 0;
+}
+
+li {
+    margin-bottom: 1pt;
+}
+
+hr {
+    border: none;
+    border-top: 0.5pt solid #999;
+    margin: 6pt 0;
+}
+
+/* Never break a function name across lines with a hyphen */
+code {
+    hyphens: none;
+}

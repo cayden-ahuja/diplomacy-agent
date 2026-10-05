@@ -1,0 +1,5 @@
+timestamp,variant,repeats,base_seed,scenario,games,errors,mean_centres,std_centres,ci95_centres,win_rate,win_ci_low,win_ci_high,survive_rate,defeat_rate,mean_rank,mean_decision_ms,p95_decision_ms,max_call_time,calls_over_limit,fallbacks,points
+2026-10-02T12:15:47,default,10,3011,2,70,0,17.557,2.149,0.503,94.29,86.21,97.76,5.71,0.0,1.071,19.5,115.7,0.254,0,,5
+2026-10-02T12:15:47,default,10,3011,3,70,0,16.271,4.385,1.027,84.29,74.01,90.99,15.71,0.0,1.286,20.3,133.6,0.1873,0,,5
+2026-10-02T12:18:23,no_enemy_prediction,10,3011,2,70,0,16.657,3.621,0.848,85.71,75.66,92.05,14.29,0.0,1.171,21.7,125.3,0.2524,0,,5
+2026-10-02T12:18:23,no_enemy_prediction,10,3011,3,70,0,15.357,5.023,1.177,74.29,62.97,83.07,22.86,2.86,1.386,19.3,133.5,0.2129,0,,5

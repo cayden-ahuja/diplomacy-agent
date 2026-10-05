@@ -1,0 +1,12 @@
+__pycache__/
+.venv/
+.DS_Store
+*.json
+report/*.html
+
+# Course framework files are not ours to publish
+agent_baselines.py
+game.py
+test.py
+visualize.py
+standard.map
